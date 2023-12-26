@@ -1,0 +1,428 @@
+
+@media (max-width: 1300px){
+    /* main */
+    .main .m_desc p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1030px){
+    /* main */
+    .main .btn {
+        width: 9vw;
+        height: 3vw;
+    }
+    .main .btn span{
+        line-height: 3vw;
+    }
+    .main.show .m_head{
+    top: 15%;
+    }
+    .main .m_tit{
+        top: 25%;
+    }
+    .main .m_subtit{
+        top: 56%;
+    }
+    .main .m_desc{
+        top: 66%;
+    }
+    .main .m_desc p{
+        font-size: 12px;
+    }
+    .main .m_std{
+        top: 84%;
+    }
+
+    /* box  */
+    .box{
+        width: 7.9vw;
+        height: 7.9vw;
+
+    }
+    .box .port{
+        font-size: 12px;
+    }
+    .num{
+        font-size: 3.8vw;
+    }
+
+    /* txt  */
+    .txt span{
+        font-size: 8.8vw;
+    }
+
+    /* ending */
+    .end{
+        gap: 14vw 0;
+    }
+    .end .e_tit p{
+        font-size: 11vw;
+    }
+    .end .btt{
+        width: 7.5vw;
+        height: 7.5vw;
+        font-size: 1.3vw;
+    }
+    .end .e_cont{
+        font-size: 1.5vw;
+    }
+}
+@media (max-width: 960px){
+
+    /* intro */
+    .intro .i_desc p{
+        font-size: 2.9vw;
+    }
+}
+@media (max-width: 850px){
+
+    /* box  */
+    .box{
+        width: 9.5vw;
+        height: 9.5vw;
+
+    }
+    .box .port{
+        font-size: 1.5vw;
+    }
+    .num{
+        font-size: 4.3vw;
+    }
+
+    /* txt  */
+    .txt span{
+        font-size: 9.5vw;
+    }
+    .txt .sub{
+        font-size: 2.5vw;
+    }
+}
+@media (max-width: 820px){
+    /* body */
+    body{
+        overflow: scroll;
+    }
+    /* wrap */
+    #wrap{
+        cursor: default;
+    }
+    .cursor{
+        display: none;
+    }
+    .cursor.show{
+        display: none;
+    }
+
+    /* main */
+    .main nav {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        flex-direction: row;
+        gap: 0 1vw;
+    }
+    .main .btn{
+        opacity: 1;
+    }
+    .main .m_img{
+        display: block;
+        opacity: 1;
+    }
+    .main .m_img svg path{
+        stroke-dasharray: 485;
+        stroke-dashoffset: 0;
+        animation: m_img 2s ease forwards;
+    }
+    @keyframes m_img {
+        0%{stroke-dashoffset: 485;}
+        100%{stroke-dashoffset: 0;}
+    }
+    .main .m_head{
+        position: absolute;
+        top: 18%;
+    }
+    .main .m_head>div{
+        animation: none;
+    }
+    .main .m_tit span{
+        opacity: 1;
+    }
+    .main .m_subtit p{
+        opacity: 1;
+    }
+    .main .m_desc p{
+        opacity: 1;
+    }
+    .main .m_std{
+        animation: std_850 2.2s ease-in-out infinite;
+    }
+    @keyframes std_850 {
+        0%{opacity: 0;}
+        50%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+
+
+    /* line */
+    .lines{
+        width: 100vw;
+    }
+    .line:nth-child(1){
+        margin-left: -42%;
+    }
+    .line:nth-child(3){
+        margin-left: 42%;
+    }
+
+    /* section */
+    section article{
+        padding: 0 8%;
+    }
+
+    /* main */
+    .main{
+        overflow: hidden;
+    }
+    .main.show .m_head{
+        top: 20%;
+    }
+    .main .m_tit{
+        top: 7%;
+        display: flex;
+    }
+    .main .m_tit span{
+        font-size: 12.5vw;
+    }
+    .main .m_tit span.r_768{
+        display: inline-block;
+    }
+    .main .m_tit{
+        transform: translateX(0%);
+        animation: r_768 20s linear infinite;
+    }
+    @keyframes r_768 {
+        0%{transform: translateX(-15%);}
+        100%{transform: translateX(-70%);}
+    }
+    .main .m_subtit{
+        display: none;
+    }
+    .main .m_desc{
+        top: 72%;
+    }
+    .main .m_std{
+        top: 86%;
+        font-size: 12px;
+    }
+    
+    /* intro */
+    .intro .i_head>div p{
+        font-size: 13px;
+    }
+    .intro .i_head>div span{
+        font-size: 10px;
+    }
+    .intro .i_desc p {
+        font-size: 3.3vw;
+    }
+    .intro .i_info>div>p{
+        font-size: 12px;
+    }
+
+    /* wave2 */
+    .wave2{
+        align-items: center;
+    }    
+    /* spana2 */
+    .spana2{
+        align-items: center;
+    }
+
+
+    /* txt */
+    .txt span{
+        line-height: 10.8vw;
+    }
+    .txt .sub{
+        padding: 10% 0 0 1%;
+    }
+
+    
+    /* ending */
+    .end{
+        gap: 18vw 0;
+    }
+    .end .e_tit p{
+        font-size: 13vw;
+    }
+    .end .btt{
+        width: 9vw;
+        height: 9vw;
+        font-size: 1.7vw;
+    }
+    .end .e_cont{
+        font-size: 2vw;
+    }
+}
+@media (max-width: 600px){
+    /* main */
+    .main nav{
+        gap: 0 2vw;
+    }
+    .main .m_img svg{
+        width: 120vw;
+    }
+    .main .btn {
+        width: 10.5vw;
+        height: 3.5vw;
+    }
+    .main .btn span{
+        line-height: 3.5vw;
+        font-size: 13px;
+    }
+    .main .m_tit span{
+        font-size: 15.5vw;
+    }
+
+    .intro .i_head>div p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px){
+    /* line */
+    .line:nth-child(1){
+        margin-left: -44%;
+    }
+    .line:nth-child(3){
+        margin-left: 44%;
+    }
+    
+    /* section */
+    section article{
+        padding: 0 6%;
+    }
+    
+    /* main */
+    .main .btn {
+        width: 14vw;
+        height: 5vw;
+    }
+    .main .btn span{
+        line-height: 5vw;
+        font-size: 13px;
+    }
+    .main .m_img svg{
+        width: 132vw;
+    }
+    .main .m_tit span{
+        font-size: 15.5vw;
+    }  
+    .main .m_tit span{
+        font-size: 19.5vw;
+    }
+    .main .m_subtit{
+        display: block;
+        top: 72%;
+    }
+    .main .m_subtit p{
+        font-size: 16px;
+    }
+    .main .m_desc{
+        display: none;
+    }
+
+    /* intro */
+    .intro .i_head>div p{
+        font-size: 2.7vw;
+    }
+    .intro .i_head>div span{
+        font-size: 2vw;
+        transform: translateY(6%);
+    }
+    .intro .i_info>div>p{
+        font-size: 2.7vw;
+    }
+
+    /* box */
+    .box{
+        width: 9.7vw;
+        height: 9.7vw;
+    }
+    .box .port{
+        font-size: 1.6vw;
+    }
+
+    /* txt */
+    .txt span{  
+        font-size: 9.7vw;
+        line-height: 11.8vw;
+    }
+
+    
+    /* ending */
+    .end{
+        gap: 25vw 0;
+    }
+    .end .e_tit p{
+        font-size: 13.5vw;
+    }
+    .end .btt{
+        width: 11vw;
+        height: 11vw;
+        font-size: 2vw;
+    }
+    .end .e_cont{
+        font-size: 2.3vw;
+    }
+
+}
+@media (max-width: 431px){
+
+    /* main */
+    .main nav{
+    gap: 0 3vw;
+    }
+    .main .btn {
+        width: 15vw;
+        height: 5.5vw;
+    }
+    .main .btn span{
+        line-height: 5.5vw;
+    }
+    .main .m_head{
+        top: 20%;
+    }
+    .main .m_tit span{
+        font-size: 24.5vw;
+    }
+    .main .m_subtit{
+        top: 74%;
+    }
+
+    /* intro */
+    .intro .i_desc p{
+        font-size: 3.5vw;
+    }
+    .intro .i_head>div span{
+        transform: translateY(0%);
+    }
+
+    /* ending */
+    .end{
+        gap: 12vw 0;
+    
+    }
+    .end .e_tit p:nth-child(2){
+        display: none;
+    }
+    .end .e_tit .r_431{
+        display: block;
+    }
+    .end .btt{
+        display: none;
+    }
+
+}
+@media (max-width: 370px){
+}
