@@ -428,163 +428,163 @@
     </div>
     
     <script src="./js/all.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="./js/script.js">
 
-        $(function(){
-		    $("html, body").animate({ scrollTop: 0 }, 1); 
-        });
+        // $(function(){
+		//     $("html, body").animate({ scrollTop: 0 }, 1); 
+        // });
 
-        //마우스 포인터 움직이기
-        $(window).mousemove(function(e){
-            e.preventDefault
-            $(".cursor").css({left:e.clientX,top:e.clientY})
-        })
+        // //마우스 포인터 움직이기
+        // $(window).mousemove(function(e){
+        //     e.preventDefault
+        //     $(".cursor").css({left:e.clientX,top:e.clientY})
+        // })
 
-        //Home, About, work 버튼 enter
-        const nav_Btn = $(".main nav a")
-        nav_Btn.mouseenter(function(e){
-            e.preventDefault
-            let target = $(this)
-            let index = target.index()
-            nav_Btn.eq(index).find("span").each(function(i){
-                setTimeout(function(){
-                    nav_Btn.eq(index).find("span").eq(i).addClass("show")
-                }, 30*(i+1))
-            })
-        })
-        //Home, About, work 버튼 leave
-        $(".main .btn").mouseleave(function(){
-            $(".main .btn span").removeClass("show")
-        })
+        // //Home, About, work 버튼 enter
+        // const nav_Btn = $(".main nav a")
+        // nav_Btn.mouseenter(function(e){
+        //     e.preventDefault
+        //     let target = $(this)
+        //     let index = target.index()
+        //     nav_Btn.eq(index).find("span").each(function(i){
+        //         setTimeout(function(){
+        //             nav_Btn.eq(index).find("span").eq(i).addClass("show")
+        //         }, 30*(i+1))
+        //     })
+        // })
+        // //Home, About, work 버튼 leave
+        // $(".main .btn").mouseleave(function(){
+        //     $(".main .btn span").removeClass("show")
+        // })
     
-         //Home, About, work 버튼 animate
-        nav_Btn.click(function(e){
-            e.preventDefault
-            let target = $(this)
-            let index = target.index()
-            const section = arti.eq(index)
-            const offset = section.offset().top
-            $("html,body").animate({scrollTop:offset}, 800)
-        })
+        //  //Home, About, work 버튼 animate
+        // nav_Btn.click(function(e){
+        //     e.preventDefault
+        //     let target = $(this)
+        //     let index = target.index()
+        //     const section = arti.eq(index)
+        //     const offset = section.offset().top
+        //     $("html,body").animate({scrollTop:offset}, 800)
+        // })
 
-        //메인 클릭시 이벤트
-        $(window).click(function(){
-            //스크롤 초기화
-            $("body").css({overflow:"scroll"})
-            //커서 초기화
-            $(".cursor").addClass("show")
-            //커서 포인터로 바꾸기
-            $("#wrap").css({cursor:"default"})
-            //메인 contact
-            $(".btn").css({opacity:1})
-            //메인 m_head, m_tit, m_subtit, m_desc
-            $(".main").addClass("show")
-            //메인 m_tit
-            $(".main .m_tit span").each(function(i){
-                setTimeout(function(){
-                    $(".main .m_tit span").eq(i).addClass("show")
-                },60*(i+1))
-            })
-        })
+        // //메인 클릭시 이벤트
+        // $(window).click(function(){
+        //     //스크롤 초기화
+        //     $("body").css({overflow:"scroll"})
+        //     //커서 초기화
+        //     $(".cursor").addClass("show")
+        //     //커서 포인터로 바꾸기
+        //     $("#wrap").css({cursor:"default"})
+        //     //메인 contact
+        //     $(".btn").css({opacity:1})
+        //     //메인 m_head, m_tit, m_subtit, m_desc
+        //     $(".main").addClass("show")
+        //     //메인 m_tit
+        //     $(".main .m_tit span").each(function(i){
+        //         setTimeout(function(){
+        //             $(".main .m_tit span").eq(i).addClass("show")
+        //         },60*(i+1))
+        //     })
+        // })
 
-        //스크롤시 발생하는 이벤트 
-        const arti = $("section article")
-        $(window).scroll(function(){
-            let wScroll = $(this).scrollTop()
-            //intro
-            //i_head
-            if(wScroll >= arti.eq(1).offset().top - $(window).height()/2){
-                $(".intro .i_head>div").each(function(i){
-                    setTimeout(function(){
-                        $(".intro .i_head>div").eq(i).addClass("show")
-                    },80*(i+1))
-                })
-            }
-            //i_info
-            if(wScroll >= arti.eq(1).offset().top - $(window).height()/6){
-                $(".intro .i_info>div>p").each(function(i){
-                    setTimeout(function(){
-                        $(".intro .i_info>div>p").eq(i).addClass("show")
-                    },80*(i+1))
-                })
-            }
-            //wave1
-            if(wScroll >= arti.eq(2).offset().top - $(window).height()/4){
-                $(".wave1 .tit .txt span").each(function(i){
-                    setTimeout(function(){
-                        $(".wave1 .tit .txt span").eq(i).addClass("show")
-                    },20*(i+1))
-                })
-                $(".wave1").addClass("show")
-            } 
-            //wave2
-            if(wScroll >= arti.eq(3).offset().top - $(window).height()/4){
-                $(".wave2 figure").addClass("show")
-            }
-            //dcmall1
-            if(wScroll >= arti.eq(4).offset().top - $(window).height()/4){
-                $(".dcmall1 .tit .txt span").each(function(i){
-                    setTimeout(function(){
-                        $(".dcmall1 .tit .txt span").eq(i).addClass("show")
-                    },20*(i+1))
-                })
-            } 
-            //dcmall1 txt_l, txt_r
-            if(wScroll >= arti.eq(4).offset().top){
-                let fontSize = $(".dcmall1 .tit .txt>div>div>span").css("font-size").split('.', 1)/2
-                console.log(fontSize)
-                $(".dcmall1 .tit .txt .txt_l>div").each(function(i){
-                    setTimeout(function(){
-                        $(".dcmall1 .tit .txt .txt_l>div").eq(i).css("transform","translateX(-"+fontSize+"px)")
-                    },100*(i+1))
-                })
-                $(".dcmall1 .tit .txt .txt_r>div").each(function(i){
-                    setTimeout(function(){
-                        $(".dcmall1 .tit .txt .txt_r>div").eq(i).css("transform","translateX("+fontSize+"px)")
-                    },100*(i+1))
-                })
-            }
-            //dcmall2
-            if(wScroll >= arti.eq(5).offset().top - $(window).height()/4){
-                $(".dcmall2 figure").addClass("show")
-            }
-            //spana1
-            if(wScroll >= arti.eq(6).offset().top - $(window).height()/4){
-                $(".spana1 .tit .txt span").each(function(i){
-                    setTimeout(function(){
-                        $(".spana1 .tit .txt span").eq(i).addClass("show")
-                    },20*(i+1))
-                })
-                $(".spana1").addClass("show")
-            } 
-            //spana2
-            if(wScroll >= arti.eq(7).offset().top - $(window).height()/4){
-                $(".spana2 figure").addClass("show")
-            }
-            //end
-            if(wScroll >= arti.eq(8).offset().top - $(window).height()/4){
-                $(".end").addClass("show")
-            }
-        })
+        // //스크롤시 발생하는 이벤트 
+        // const arti = $("section article")
+        // $(window).scroll(function(){
+        //     let wScroll = $(this).scrollTop()
+        //     //intro
+        //     //i_head
+        //     if(wScroll >= arti.eq(1).offset().top - $(window).height()/2){
+        //         $(".intro .i_head>div").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".intro .i_head>div").eq(i).addClass("show")
+        //             },80*(i+1))
+        //         })
+        //     }
+        //     //i_info
+        //     if(wScroll >= arti.eq(1).offset().top - $(window).height()/6){
+        //         $(".intro .i_info>div>p").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".intro .i_info>div>p").eq(i).addClass("show")
+        //             },80*(i+1))
+        //         })
+        //     }
+        //     //wave1
+        //     if(wScroll >= arti.eq(2).offset().top - $(window).height()/4){
+        //         $(".wave1 .tit .txt span").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".wave1 .tit .txt span").eq(i).addClass("show")
+        //             },20*(i+1))
+        //         })
+        //         $(".wave1").addClass("show")
+        //     } 
+        //     //wave2
+        //     if(wScroll >= arti.eq(3).offset().top - $(window).height()/4){
+        //         $(".wave2 figure").addClass("show")
+        //     }
+        //     //dcmall1
+        //     if(wScroll >= arti.eq(4).offset().top - $(window).height()/4){
+        //         $(".dcmall1 .tit .txt span").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".dcmall1 .tit .txt span").eq(i).addClass("show")
+        //             },20*(i+1))
+        //         })
+        //     } 
+        //     //dcmall1 txt_l, txt_r
+        //     if(wScroll >= arti.eq(4).offset().top){
+        //         let fontSize = $(".dcmall1 .tit .txt>div>div>span").css("font-size").split('.', 1)/2
+        //         console.log(fontSize)
+        //         $(".dcmall1 .tit .txt .txt_l>div").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".dcmall1 .tit .txt .txt_l>div").eq(i).css("transform","translateX(-"+fontSize+"px)")
+        //             },100*(i+1))
+        //         })
+        //         $(".dcmall1 .tit .txt .txt_r>div").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".dcmall1 .tit .txt .txt_r>div").eq(i).css("transform","translateX("+fontSize+"px)")
+        //             },100*(i+1))
+        //         })
+        //     }
+        //     //dcmall2
+        //     if(wScroll >= arti.eq(5).offset().top - $(window).height()/4){
+        //         $(".dcmall2 figure").addClass("show")
+        //     }
+        //     //spana1
+        //     if(wScroll >= arti.eq(6).offset().top - $(window).height()/4){
+        //         $(".spana1 .tit .txt span").each(function(i){
+        //             setTimeout(function(){
+        //                 $(".spana1 .tit .txt span").eq(i).addClass("show")
+        //             },20*(i+1))
+        //         })
+        //         $(".spana1").addClass("show")
+        //     } 
+        //     //spana2
+        //     if(wScroll >= arti.eq(7).offset().top - $(window).height()/4){
+        //         $(".spana2 figure").addClass("show")
+        //     }
+        //     //end
+        //     if(wScroll >= arti.eq(8).offset().top - $(window).height()/4){
+        //         $(".end").addClass("show")
+        //     }
+        // })
 
 
-        // 카드 움직임
-        const card = $("article figure .img .img_box")
-        card.mousemove(function(e){
-            let x = e.offsetX
-            let y = e.offsetY
+        // // 카드 움직임
+        // const card = $("article figure .img .img_box")
+        // card.mousemove(function(e){
+        //     let x = e.offsetX
+        //     let y = e.offsetY
 
-            let rotateY = -1/5 * x + 30
-            let rotateX = 4/30 * y - 30
+        //     let rotateY = -1/5 * x + 30
+        //     let rotateX = 4/30 * y - 30
         
-            card.css('transform',"perspective(1280px) rotateX("+rotateX+"deg) rotateY("+rotateY+"deg")
-        })
+        //     card.css('transform',"perspective(1280px) rotateX("+rotateX+"deg) rotateY("+rotateY+"deg")
+        // })
 
-        //처음으로 돌아가기
-        $(".end .btt").click(function(){
-            $("html,body").animate({scrollTop:0}, 800)
-        })
+        // //처음으로 돌아가기
+        // $(".end .btt").click(function(){
+        //     $("html,body").animate({scrollTop:0}, 800)
+        // })
 
     </script>
 </body>
